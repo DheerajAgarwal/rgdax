@@ -44,9 +44,9 @@ The current version does not support the following capabilities:
 TBD
 
 ## Some Inspirations  
-[Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  # The real reason I started this project.
-[coinbaseexchangeenterorder-r](https://gist.github.com/gsee/b20b3b9893cd74e462a8) # Helped break me auth calls
-[MTDO's Shiny App](https://github.com/mtdo/shiny-gdax) # for the data cleaning of public functions
+[Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  # The real reason I started this project.  
+[coinbaseexchangeenterorder-r](https://gist.github.com/gsee/b20b3b9893cd74e462a8) # Helped break me auth calls.  
+[MTDO's Shiny App](https://github.com/mtdo/shiny-gdax) # for the data cleaning of public functions.  
 
 ## License:
 [MIT](https://github.com/DheerajAgarwal/rgdax/blob/master/LICENSE)
