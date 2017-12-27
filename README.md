@@ -41,7 +41,10 @@ The current version does not support the following key capabilities:
 4. The build has not be tested on windows completely. Build is success for macOS.
 
 ## How to install:
-TBD
+```
+library(devtools)
+install_github("DheerajAgarwal/rgdax")
+```
 
 ## Some Inspirations
 [Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  #The real reason I started this project.
