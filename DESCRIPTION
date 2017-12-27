@@ -1,12 +1,12 @@
 Package: rgdax
 Type: Package
 Title: R Wrapper for GDAX Cruptocurrency exchange
-Version: 0.1.0
+Version: 0.2.0
 Author: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Dheeraj Agarwal <dheeeraj.agarwal@gmail.com>
 Description: Allow access to both public and private end points to GDAX cryptocurrency exchange.
-    For authenticated flow, users must have valid api, secret and passphrase to be able to connect. 
+    For authenticated flow, users must have valid api, secret and passphrase to be able to connect.
     Read more details on getting access to GADX API at:
     https://support.gdax.com/customer/en/portal/articles/2425383-how-can-i-create-an-api-key-for-gdax-.
 URL: https://github.com/DheerajAgarwal/rgdax/
