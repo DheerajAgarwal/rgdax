@@ -1,0 +1,40 @@
+#' Utility Function to parse message from api response
+#'
+#' @name parse_response
+#' @description An internal function to parse the api response for various public functions.
+#' @param path Mandatory character parameter. This is an extension of the api end point and passed as an argument from the function calling \code{parse_response}.
+#' @param query Optional named list parameter. This would consist of any named params to be passed to the api end point.
+#'
+#' @examples
+#' \dontrun{
+#' parse_response("/currencies")
+#' parse_response(path = your_path, query = list("start" = start,"end" = end))
+#' }
+#'
+#' @return  A named list or a dataframe object of the response.
+#'
+
+parse_response <- function(path, query = NULL) {
+  #define api base url----
+  api.url <- "https://api.gdax.com"
+
+  #create final end point----
+  url <- modify_url(api.url, path = path, query = query)
+
+  #fetch response----
+  response <- GET(url = url)
+
+  #validate success----
+  if (response$status_code != 200) {
+    content <- fromJSON(content(response,
+                                as = "text"))
+    message <- content$message
+    stop(message)
+  } else {
+    content <- fromJSON(content(response,
+                                as = "text"))
+  }
+
+  #return----
+  return(content)
+}
