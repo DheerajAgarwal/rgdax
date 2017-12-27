@@ -5,7 +5,7 @@ Please read through the api docs to gain a better understanding of how each end 
 
 There are two main groups of api end points.
 
-**Public:** All functions belonging to this group start with `public_` and can be used without any authentication.
+**Public:** All functions belonging to this group start with `public_` and can be used without any authentication.  
 **Auth:** This category of functions will require _API Key_, _API Secret_ and _Passphrase_ to connect successfully to the account. To get your api keys, refer to [how to create GDAX api keys](
     https://support.gdax.com/customer/en/portal/articles/2425383-how-can-i-create-an-api-key-for-gdax-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
 
