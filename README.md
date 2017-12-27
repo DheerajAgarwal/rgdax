@@ -10,7 +10,15 @@ There are two main groups of api end points.
 **Auth:** This category of functions will require _API Key_, _API Secret_ and _Passphrase_ to connect successfully to the account. To get your api keys, refer to [how to create GDAX api keys](
     https://support.gdax.com/customer/en/portal/articles/2425383-how-can-i-create-an-api-key-for-gdax-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
 
-***Supported Public Functions:***
+## Supported Functions
+
+***What's new in this version***
+
+1. Corrected documentaion for the `passphrase` argument in all auth functions.
+2. Updated description for auth based functions explaining the need for mandatory arguments.
+3. Other typo corrections.
+
+***Complete List of Supported Public Functions:***
 1. candles
 2. daystats
 3. info
@@ -19,7 +27,7 @@ There are two main groups of api end points.
 6. time
 7. trades
 
-***Supported Auth Functions:***
+***Complete List of Supported Auth Functions:***
 1. account_hist
 2. account
 3. accounts
