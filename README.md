@@ -38,6 +38,7 @@ The current version does not support the following key capabilities:
 1. Pagination
 2. Ability to cancel the order
 3. Make deposits or withdrawls
+4. The build has not be tested on windows completely. Build is success for macOS.
 
 ## How to install:
 TBD
