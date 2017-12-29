@@ -24,7 +24,12 @@
 
 
 # function definition ----
-auth <- function(method, req.url, api.key, secret, passphrase, order = NULL) {
+auth <- function(method,
+                 req.url,
+                 api.key,
+                 secret,
+                 passphrase,
+                 order = NULL) {
   #define api base url----
   api.url <- "https://api.gdax.com"
 
@@ -100,6 +105,23 @@ auth <- function(method, req.url, api.key, secret, passphrase, order = NULL) {
           postfields = order
         )
       )
+    }
+  }
+  #Generating DELETE results
+  else if (method == "DELETE") {
+    #Post test macOS----
+    if (Sys.info()["sysname"] == "Darwin") {
+      response <- fromJSON(rawToChar(httpDELETE(
+        url = url,
+        curl = getCurlHandle(useragent = "R"),
+        httpheader = httpheader
+      )))
+    } else {
+      response <- fromJSON(httpDELETE(
+        url = url,
+        curl = getCurlHandle(useragent = "R"),
+        httpheader = httpheader
+      ))
     }
   }
 
