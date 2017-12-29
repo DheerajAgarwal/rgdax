@@ -44,8 +44,8 @@ Apart from these two categories, the library also contains a few internal functi
 
 ## Limitations:
 The current version does not support the following key capabilities:
-1. Pagination
-2. Ability to cancel the order
+1. Pagination  
+~2. Ability to cancel the order~  
 3. Make deposits or withdrawls
 4. The build has not be tested on windows completely. Build is success for macOS.
 
@@ -54,6 +54,12 @@ The current version does not support the following key capabilities:
 library(devtools)
 install_github("DheerajAgarwal/rgdax")
 ```
+
+## To-do:
+1. Enhance `cancel_order` to cancel specific orders or orders based on currency-pairs.
+2. Use `httr` instead of `RCurl` for all request-responses.
+3. Test on windows
+4. Run `devtools::check()` and ready the code for a CRAN release.
 
 ## Some Inspirations
 [Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  #The real reason I started this project.
