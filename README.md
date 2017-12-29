@@ -13,10 +13,10 @@ There are two main groups of api end points.
 ## Supported Functions
 
 ***What's new in this version***
-
-1. Corrected documentaion for the `passphrase` argument in all auth functions.
-2. Updated description for auth based functions explaining the need for mandatory arguments.
-3. Other typo corrections.
+1. New function `cancel_order` which cancels all pending orders.
+2. Corrected documentaion for the `passphrase` argument in all auth functions.
+3. Updated description for auth based functions explaining the need for mandatory arguments.
+4. Other typo corrections.
 
 ***Complete List of Supported Public Functions:***
 1. candles
@@ -32,10 +32,11 @@ There are two main groups of api end points.
 2. account
 3. accounts
 4. add_order
-5. fills
-6. holds
-7. profile
-8. pymt_methods
+5. cancel_order
+6. fills
+7. holds
+8. profile
+9. pymt_methods
 
 Apart from these two categories, the library also contains a few internal functions which are used across the public and the auth functions:
 1. parse_response
