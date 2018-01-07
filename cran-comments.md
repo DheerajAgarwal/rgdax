@@ -1,4 +1,14 @@
 # Date Jan 07 2018  
+## 2nd revision comments by maintainer  
+
+* LICENSE file updated. Reference from [httr](https://github.com/r-lib/httr/blob/master/LICENSE)
+
+# Date Jan 07 2018  
+## 2nd review comments by CRAN
+
+Please only ship the CRAN template for the MIT license.
+
+# Date Jan 07 2018  
 ## Revision comments by maintainer
 
 * 2 spell checks fixed. Others were false positives.
