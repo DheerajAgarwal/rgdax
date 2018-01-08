@@ -1,3 +1,26 @@
+# Date Jan 08 2018  
+## 3rd revision comments by maintainer  
+
+* omitted the redundant "R" in your title
+* wrote package names and software names in single quotes in title and description
+* Deleted examples for unexported functions auth() and parse_response(). 
+
+# Date Jan 08 2018  
+## 3rd review comments by CRAN
+
+* omit the redundant "R" in your title
+* write package names and software names in single quotes (e.g. 'GDAX') in title and description
+* There are examples for unexported functions auth() and parse_response(). Please export these functions or delete the corresponding examples.
+
+# Date Jan 07 2018  
+## Revision comments by maintainer
+
+* 2 spell checks fixed. Others were false positives.
+* Title in the description file fixed to be in Camel Case
+* Code build tested using `devtools::build_win()`
+
+Status: 1 NOTE
+
 # Date Jan 07 2018  
 ## 2nd revision comments by maintainer  
 
