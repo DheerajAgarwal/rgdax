@@ -5,12 +5,6 @@
 #' @param path Mandatory character parameter. This is an extension of the api end point and passed as an argument from the function calling \code{parse_response}.
 #' @param query Optional named list parameter. This would consist of any named params to be passed to the api end point.
 #'
-#' @examples
-#' \dontrun{
-#' parse_response("/currencies")
-#' parse_response(path = your_path, query = list("start" = start,"end" = end))
-#' }
-#'
 #' @return  A named list or a dataframe object of the response.
 #'
 

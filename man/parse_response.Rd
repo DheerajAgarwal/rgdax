@@ -17,10 +17,3 @@ A named list or a dataframe object of the response.
 \description{
 An internal function to parse the api response for various public functions.
 }
-\examples{
-\dontrun{
-parse_response("/currencies")
-parse_response(path = your_path, query = list("start" = start,"end" = end))
-}
-
-}

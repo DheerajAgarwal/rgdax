@@ -25,9 +25,3 @@ A named list of server response.
 \description{
 This is an internal function that will be used for all private connections to the user account. This function determines the kind of GDAX call (GET / POST / DELETE).
 }
-\examples{
-\dontrun{
-auth(method = "GET", req.url = "/accounts")
-}
-
-}

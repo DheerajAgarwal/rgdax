@@ -14,11 +14,6 @@
 #'
 #' @return  A named list of server response.
 #'
-#' @examples
-#' \dontrun{
-#' auth(method = "GET", req.url = "/accounts")
-#' }
-#'
 #' @import digest
 #'
 
