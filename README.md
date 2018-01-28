@@ -1,7 +1,8 @@
 # rgdax
 
-[![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax.svg?branch=dev)
+[![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
+![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
 
 This package is inspired by official and unofficial wrappers for [GDAX API](https://docs.gdax.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
