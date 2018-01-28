@@ -1,5 +1,8 @@
 # rgdax
 
+[![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax.svg?branch=dev)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
+
 This package is inspired by official and unofficial wrappers for [GDAX API](https://docs.gdax.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
 
@@ -11,12 +14,6 @@ There are two main groups of api end points.
     https://support.gdax.com/customer/en/portal/articles/2425383-how-can-i-create-an-api-key-for-gdax-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
 
 ## Supported Functions
-
-***What's new in this version***
-1. New function `cancel_order` which cancels all pending orders.
-2. Corrected documentaion for the `passphrase` argument in all auth functions.
-3. Updated description for auth based functions explaining the need for mandatory arguments.
-4. Other typo corrections.
 
 ***Complete List of Supported Public Functions:***
 1. candles
@@ -50,7 +47,9 @@ The current version does not support the following key capabilities:
 ## How to install:
 
 **From CRAN**  
-`library(rgdax)`
+```
+library(rgdax)
+```
 
 **From Github dev**
 ```
