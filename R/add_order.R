@@ -20,7 +20,7 @@
 #' @examples
 #' \dontrun{
 #' add_order("BTC-USD", api.key = your_key, secret = your_api_secret, passphrase = your_api_pass,
-#'      type="limit", side = "sell", price = 1000.25, size = 1)
+#'      type="limit", side = "s", price = 1000.25, size = 1)
 #' }
 #'
 #' @importFrom jsonlite toJSON

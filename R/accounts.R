@@ -26,8 +26,17 @@ accounts <- function(api.key,
   #define method----
   method <- "GET"
 
-  #fetch response----
-  response <- auth(
+  # #fetch response----
+  # response <- auth(
+  #   method = method,
+  #   req.url = req.url,
+  #   api.key = api.key,
+  #   secret = secret,
+  #   passphrase = passphrase
+  # )
+
+  #fetch response AUTH2----
+  response <- auth2(
     method = method,
     req.url = req.url,
     api.key = api.key,
@@ -36,7 +45,6 @@ accounts <- function(api.key,
   )
 
   #transform----
-  response <- as.data.frame(response)
   response$balance <- as.numeric(response$balance)
   response$available <- as.numeric(response$available)
   response$hold <- as.numeric(response$hold)
