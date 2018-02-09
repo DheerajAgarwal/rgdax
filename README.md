@@ -26,6 +26,7 @@ There are two main groups of api end points.
 ## Supported Functions
 
 ***Complete List of Supported Public Functions:***
+
 1. candles
 2. daystats
 3. info
@@ -35,6 +36,7 @@ There are two main groups of api end points.
 7. trades
 
 ***Complete List of Supported Auth Functions:***
+
 1. account_hist
 2. account
 3. accounts
@@ -46,6 +48,7 @@ There are two main groups of api end points.
 9. pymt_methods
 
 Apart from these two categories, the library also contains a few internal functions which are used across the public and the auth functions:
+
 1. parse_response
 2. auth
 
