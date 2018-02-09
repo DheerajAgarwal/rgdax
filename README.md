@@ -1,4 +1,8 @@
-# rgdax
+# rgdax 0.3.0
+
+[![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
+![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
 
 This package is inspired by official and unofficial wrappers for [GDAX API](https://docs.gdax.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
@@ -11,12 +15,6 @@ There are two main groups of api end points.
     https://support.gdax.com/customer/en/portal/articles/2425383-how-can-i-create-an-api-key-for-gdax-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
 
 ## Supported Functions
-
-***What's new in this version***
-1. New function `cancel_order` which cancels all pending orders.
-2. Corrected documentaion for the `passphrase` argument in all auth functions.
-3. Updated description for auth based functions explaining the need for mandatory arguments.
-4. Other typo corrections.
 
 ***Complete List of Supported Public Functions:***
 1. candles
@@ -50,7 +48,10 @@ The current version does not support the following key capabilities:
 ## How to install:
 
 **From CRAN**  
-`library(rgdax)`
+```
+library(rgdax)
+```
+This is same as installing `master` branch from github.
 
 **From Github dev**
 ```
@@ -59,11 +60,19 @@ install_github("DheerajAgarwal/rgdax", ref="dev")
 ```
 
 ## Some Inspirations
+
 [Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  #The real reason I started this project.
 
 [coinbaseexchangeenterorder-r](https://gist.github.com/gsee/b20b3b9893cd74e462a8) #Helped me break the auth calls.
 
 [MTDO's Shiny App](https://github.com/mtdo/shiny-gdax) #For the data cleaning of most public functions.
+
+## URLs   
+[github CRAN](https://github.com/DheerajAgarwal/rgdax/tree/master)
+
+[bitbucket DEV](https://bitbucket.org/DheerajdrjAgarwal/rgdax)
+
+[github DEV](https://github.com/DheerajAgarwal/rgdax)
 
 ## License:
 [MIT](https://github.com/DheerajAgarwal/rgdax/blob/master/LICENSE)
