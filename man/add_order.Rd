@@ -19,8 +19,9 @@ add_order(api.key, secret, passphrase, product_id = "LTC-USD",
 
 \item{product_id}{Optional character value for the currency pair. The default is \code{"LTC-USD"}. This param is case insensitive and must be one of the valid currency-pair. The list of valid currency-pairs can be fetched using \code{\link{public_info}}.}
 
-\item{type}{Optional character value for the order type. The default is \code{"limit"}. This param is case insensitive and must be one of the valid order types. The current valid order types is only \code{"limit"}.
-#' @param stop Optional parameter. This parameter is required if a stop order needs to be placed. Possible values apart from default \code{NULL} are \code{"loss"} or \code{"entry"}. If a non-default value is provided, \code{stop_price} argument must be defined.}
+\item{type}{Optional character value for the order type. The default is \code{"limit"}. This param is case insensitive and must be one of the valid order types. The current valid order types is only \code{"limit"}.}
+
+\item{stop}{Optional parameter. This parameter is required if a stop order needs to be placed. Possible values apart from default \code{NULL} are \code{"loss"} or \code{"entry"}. If a non-default value is provided, \code{stop_price} argument must be defined.}
 
 \item{stop_price}{Optional parameter.The value is needed only if \code{stop} is defined. Sets the trigger price for stop order. If \code{stop ="loss"}, the triger price is when market price is at or below the trigger. If \code{stop = "entry"}, the trigger price is when market price is at or above the trigger.}
 

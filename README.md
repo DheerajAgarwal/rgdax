@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # rgdax 0.3.0
 
 [![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax)
