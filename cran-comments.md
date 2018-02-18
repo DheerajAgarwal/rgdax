@@ -1,5 +1,5 @@
 # Date Feb 18 2018
-## First revision comments for verions 0.3.0
+## First revision comments for version 0.3.0
 
 * There are 2 Notes
 
@@ -24,7 +24,7 @@
 ## Revision comments by maintainer
 
 * 2 spell checks fixed. Others were false positives.
-* Title in the description file fixed to be in Camel Case
+* Title in the description file fixed to be in title Case
 * Code build tested using `devtools::build_win()`
 
 Status: 1 NOTE
