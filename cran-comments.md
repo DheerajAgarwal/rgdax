@@ -1,3 +1,11 @@
+# Date Feb 18 2018
+## First revision comments for verions 0.3.0
+
+* There are 2 Notes
+
+
+
+
 # Date Jan 08 2018  
 ## 3rd revision comments by maintainer  
 

@@ -13,7 +13,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' fills(api.key = your_key, secret = your_api_secret, passphrase = your_api_pass, product_id = "LTC-USD")
+#' fills(api.key = your_key,
+#' secret = your_api_secret,
+#' passphrase = your_api_pass,
+#' product_id = "LTC-USD")
 #' }
 #'
 #' @export

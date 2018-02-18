@@ -26,17 +26,8 @@ accounts <- function(api.key,
   #define method----
   method <- "GET"
 
-  # #fetch response----
-  # response <- auth(
-  #   method = method,
-  #   req.url = req.url,
-  #   api.key = api.key,
-  #   secret = secret,
-  #   passphrase = passphrase
-  # )
-
-  #fetch response AUTH2----
-  response <- auth2(
+  #fetch response----
+  response <- auth(
     method = method,
     req.url = req.url,
     api.key = api.key,
