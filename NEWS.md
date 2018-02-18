@@ -2,6 +2,12 @@
 
 ## Version?
 
+0.4.0
+
+## What's New?
+
+Only documentation updates like fixing typos and providing clarification on usage. No changes have been made to any code or functions.
+
 0.3.0
 
 ## What's New?
