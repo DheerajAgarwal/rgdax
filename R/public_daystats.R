@@ -2,7 +2,7 @@
 #'
 #' @name public_daystats
 #'
-#' @description This function is a public function and will fetch all bids/asks for provided currency pair (product_id). User should change the level to get the best bid/ask or to fetch all bids/asks.
+#' @description This function is a public function and will fetch get 24 hr stats for the provided currency pair (product_id). Volume is in base currency units. open, high, low are in quote currency units.
 #'
 #' @param product_id Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.
 #'

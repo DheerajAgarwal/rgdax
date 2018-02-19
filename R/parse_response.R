@@ -1,4 +1,4 @@
-#' Utility Function to parse message from api response
+#' Utility Function To Parse Message From GDAX API For Public Functions
 #'
 #' @name parse_response
 #' @description An internal function to parse the api response for various public functions.

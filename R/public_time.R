@@ -4,7 +4,7 @@
 #'
 #' @description Gets the server time from GDAX for reference purposes. This function does not take any arguments.
 #'
-#' @return  Dataframe with time in ISO and UNIX epoch.
+#' @return  Dataframe with time in ISO and the epoch field represents decimal seconds since Unix Epoch.
 #'
 #' @examples
 #' \dontrun{

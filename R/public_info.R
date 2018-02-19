@@ -2,7 +2,7 @@
 #'
 #' @name public_info
 #'
-#' @description This function is a public function and will fetch all supported currency pairs or all supported currencies based on the \code{source} argument.
+#' @description This function is a public function and will fetch all supported currency pairs by default. The function can also fetch all the supported currencies based on the \code{source} argument.
 #'
 #' @param product Optional Boolean Parameter. Default to \code{TRUE}. \code{NA} behavior is similar to default. \code{FALSE} is equivalent of currency public end point.
 #'

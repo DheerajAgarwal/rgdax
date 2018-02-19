@@ -1,8 +1,8 @@
-#' Get latest buy and sell trades.
+#' Get Latest Buy & Sell Trades.
 #'
 #' @name public_trades
 #'
-#' @description TBD
+#' @description This is a public function and will fetch the 100 latest trades for the provided currency pair (product_id).
 #'
 #' @param product_id Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.
 #'

@@ -8,7 +8,7 @@
 #'
 #' @param level Optional parameter. Integer value of level denoting level of detail. Valid user values of 1, 2, 3. Default to 1.
 #'
-#' @return  TBD
+#' @return  A named list with bids and asks for the provided currency pair.
 #'
 #' @examples
 #' \dontrun{
@@ -19,11 +19,6 @@
 #'
 #' @export
 
-##-----------------------------
-
-## FUNCTION IS BROKEN and transformations do not work for Level 1 and 2
-
-##-----------------------------
 public_orderbook <- function(product_id = "LTC-USD", level = 1) {
   #case remediation----
   product_id <- toupper(product_id)

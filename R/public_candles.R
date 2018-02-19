@@ -2,12 +2,12 @@
 #'
 #' @name public_candles
 #'
-#' @description This function is a public function and will fetch all bids/asks for provided currency pair (product_id). User should change the level to get the best bid/ask or to fetch all bids/asks.
+#' @description This function is a public function and will fetch historic rates for provided currency pair (product_id). Rates are returned in grouped buckets based on requested granularity..
 #'
 #' @param product_id Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.
 #' @param start Optional parameter. Start time in ISO 8601
 #' @param end Optional parameter. End time in ISO 8601
-#' @param granularity Optional parameter. Desired timeslice in seconds.
+#' @param granularity Optional parameter. Desired timeslice in seconds. The granularity field must be one of the following values: \code{60, 300, 900, 3600, 21600, 86400}. Otherwise, the request will be rejected. These values correspond to timeslices representing one minute, five minutes, fifteen minutes, one hour, six hours, and one day, respectively.
 #'
 #' @return  Dataframe with a time of the candle, low, high, open , close and volume for that candle.
 #'

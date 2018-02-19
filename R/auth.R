@@ -1,4 +1,4 @@
-#' Create Signature for GDAX API
+#' Parse Authenticated Calls To GDAX API
 #'
 #'
 #' @name auth
