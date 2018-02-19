@@ -2,7 +2,7 @@
 % Please edit documentation in R/parse_response.R
 \name{parse_response}
 \alias{parse_response}
-\title{Utility Function to parse message from api response}
+\title{Utility Function To Parse Message From GDAX API For Public Functions}
 \usage{
 parse_response(path, query = NULL)
 }

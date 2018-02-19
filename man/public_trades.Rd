@@ -2,7 +2,7 @@
 % Please edit documentation in R/public_trades.R
 \name{public_trades}
 \alias{public_trades}
-\title{Get latest buy and sell trades.}
+\title{Get Latest Buy & Sell Trades.}
 \usage{
 public_trades(product_id = "BTC-USD")
 }
@@ -13,7 +13,7 @@ public_trades(product_id = "BTC-USD")
 A dataframe of most recent trades indicating if it was buy / sell and what the trade size was.
 }
 \description{
-TBD
+This is a public function and will fetch the 100 latest trades for the provided currency pair (product_id).
 }
 \examples{
 \dontrun{

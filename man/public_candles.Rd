@@ -14,13 +14,13 @@ public_candles(product_id = "LTC-USD", start = NULL, end = NULL,
 
 \item{end}{Optional parameter. End time in ISO 8601}
 
-\item{granularity}{Optional parameter. Desired timeslice in seconds.}
+\item{granularity}{Optional parameter. Desired timeslice in seconds. The granularity field must be one of the following values: \code{60, 300, 900, 3600, 21600, 86400}. Otherwise, the request will be rejected. These values correspond to timeslices representing one minute, five minutes, fifteen minutes, one hour, six hours, and one day, respectively.}
 }
 \value{
 Dataframe with a time of the candle, low, high, open , close and volume for that candle.
 }
 \description{
-This function is a public function and will fetch all bids/asks for provided currency pair (product_id). User should change the level to get the best bid/ask or to fetch all bids/asks.
+This function is a public function and will fetch historic rates for provided currency pair (product_id). Rates are returned in grouped buckets based on requested granularity..
 }
 \examples{
 \dontrun{

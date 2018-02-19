@@ -2,7 +2,7 @@
 % Please edit documentation in R/auth.R
 \name{auth}
 \alias{auth}
-\title{Create Signature for GDAX API}
+\title{Parse Authenticated Calls To GDAX API}
 \usage{
 auth(method, req.url, api.key, secret, passphrase, order = NULL)
 }

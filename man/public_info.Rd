@@ -13,7 +13,7 @@ public_info(product = TRUE)
 Dataframe with ALL supported currency pairs.  A dataframe of base currencies is returned when the flag is et as \code{FALSE}.
 }
 \description{
-This function is a public function and will fetch all supported currency pairs or all supported currencies based on the \code{source} argument.
+This function is a public function and will fetch all supported currency pairs by default. The function can also fetch all the supported currencies based on the \code{source} argument.
 }
 \examples{
 \dontrun{

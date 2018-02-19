@@ -13,7 +13,7 @@ public_daystats(product_id = "LTC-USD")
 Dataframe with a single row of product's last 24 hour stats.
 }
 \description{
-This function is a public function and will fetch all bids/asks for provided currency pair (product_id). User should change the level to get the best bid/ask or to fetch all bids/asks.
+This function is a public function and will fetch get 24 hr stats for the provided currency pair (product_id). Volume is in base currency units. open, high, low are in quote currency units.
 }
 \examples{
 \dontrun{

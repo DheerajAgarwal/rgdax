@@ -7,10 +7,10 @@
 public_ticker(product_id = "BTC-USD")
 }
 \arguments{
-\item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
+\item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'BTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
 }
 \value{
-A dataframe of most recent trades.
+A dataframe of most recent trade and 24 hr volume.
 }
 \description{
 Snapshot information about the last trade (tick), best bid/ask and 24h volume.

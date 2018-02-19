@@ -7,7 +7,7 @@
 public_time()
 }
 \value{
-Dataframe with time in ISO and UNIX epoch.
+Dataframe with time in ISO and the epoch field represents decimal seconds since Unix Epoch.
 }
 \description{
 Gets the server time from GDAX for reference purposes. This function does not take any arguments.

@@ -12,7 +12,7 @@ public_orderbook(product_id = "LTC-USD", level = 1)
 \item{level}{Optional parameter. Integer value of level denoting level of detail. Valid user values of 1, 2, 3. Default to 1.}
 }
 \value{
-TBD
+A named list with bids and asks for the provided currency pair.
 }
 \description{
 This function is a public function and will fetch all bids/asks for provided currency pair (product_id). User should change the level to get the best bid/ask or to fetch all bids/asks.
