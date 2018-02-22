@@ -59,14 +59,24 @@ add_order <- function(api.key,
   }
 
   #generate order----
-  order_attribs <- list(
-    price = price,
-    size = size,
-    side = side,
-    product_id = product_id,
-    stop = stop,
-    stop_price = stop_price
-  )
+  if (is.null(stop)) {
+    order_attribs <- list(
+      type = type,
+      price = price,
+      size = size,
+      side = side,
+      product_id = product_id
+    )
+  } else {
+    order_attribs <- list(
+      price = price,
+      size = size,
+      side = side,
+      product_id = product_id,
+      stop = stop,
+      stop_price = stop_price
+    )
+  }
 
   order <- toJSON(order_attribs, auto_unbox = TRUE)
 
