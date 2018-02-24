@@ -1,7 +1,7 @@
 Package: rgdax
 Type: Package
 Title: Wrapper for 'GDAX' Cryptocurrency Exchange
-Version: 0.4.0 
+Version: 0.5.0 
 Author: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Dheeraj Agarwal <dheeeraj.agarwal@gmail.com>
