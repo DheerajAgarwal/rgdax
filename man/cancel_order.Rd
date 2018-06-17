@@ -27,7 +27,7 @@ cancel_order(api.key = your_key,
              secret = your_api_secret,
              passphrase = your_api_pass)
 
-cancel_order(order_id = TBD,
+cancel_order(order_id = "a0a00000-0000-000a-a000-a0a0aa00000a",
              api.key = your_key,
              secret = your_api_secret,
              passphrase = your_api_pass)
