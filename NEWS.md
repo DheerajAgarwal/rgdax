@@ -2,6 +2,19 @@
 
 ## Version?
 
+[0.6.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+
+## What's New?
+
+#### Bug fixes:
+
+_None_
+
+#### Enhancements:
+
+_1. Updated `cancel_order` to take an `order_id` as an optional parameter._  
+_2. Created `open_orders` to list all open orders._
+
 [0.5.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
 
 ## What's New?
