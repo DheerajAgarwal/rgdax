@@ -1,8 +1,11 @@
-# rgdax 0.6.0
+# rgdax 1.0.0
 
 [![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
 ![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
+
+## _*Note:*_   
+This is an attempted major change to the rgdax and is likely to break the existing implementations. Please use the devlopement version with caution. The last stable version is avalable on CRAN.
 
 This package is inspired by official and unofficial wrappers for [GDAX API](https://docs.gdax.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
