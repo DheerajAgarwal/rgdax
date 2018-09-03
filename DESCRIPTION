@@ -2,7 +2,7 @@ Package: rgdax
 Type: Package
 Title: Deprecated Wrapper for 'GDAX' Cryptocurrency Exchange
 Version: 1.0.0
-Author@R: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
+Authors@R: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Dheeraj Agarwal <dheeeraj.agarwal@gmail.com>
 Description: Allow access to both public and private end points to 'GDAX' cryptocurrency exchange.
