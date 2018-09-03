@@ -5,7 +5,7 @@
 ![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
 
 ## _*Note:*_   
-This is an attempted major change to the rgdax and is likely to break the existing implementations. Please use the devlopement version with caution. The last stable version is avalable on CRAN.
+This is now *deprecated* and will be soon replaced by `coinbase` a new package. The last stable version of `rgdax` is avalable on CRAN. Coinbase has proposed support for the old GDAX API's till end of 2018 and this package should continue to work till that time. However, no new development will be done on this package. Please direct your issues to [coin base pro repo](https://github.com/DheerajAgarwal/coinbase/issues)
 
 This package is inspired by official and unofficial wrappers for [GDAX API](https://docs.gdax.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
