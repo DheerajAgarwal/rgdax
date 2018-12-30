@@ -2,7 +2,20 @@
 
 ## Version?
 
-[0.6.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+[1.0.0](https://github.com/DheerajAgarwal/rgdax/tree/rgdax_0.6)  
+
+## What's New?
+
+#### Bug fixes:
+
+_None_
+
+#### Enhancements:
+
+_1. Updated `base_url` to in `auth` & `parse_response` functions._  
+_2. updated documentation in `README.md` and `DESCRIPTION` files._
+
+[0.6.0](https://github.com/DheerajAgarwal/rgdax/tree/rgdax_0.6)  
 
 ## What's New?
 
