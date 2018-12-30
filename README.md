@@ -7,7 +7,7 @@
 ## _*Note:*_   
 The previous version is now *deprecated*. Coinbase has support for the old GDAX API's till end of 2018 and version 0.6 package should continue to work till that time. This new version is likely to break the previous ones and hence, it is recommended that all users shold test this out with their existing applications and make changes as necessary.
 
-This package is inspired by official and unofficial wrappers for [Coinbase Pro API](https://docs.pro.coinbase.com/#api)).
+This package is inspired by official and unofficial wrappers for [Coinbase Pro API](https://docs.pro.coinbase.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
 
 There are two main groups of api end points.
