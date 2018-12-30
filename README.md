@@ -5,21 +5,20 @@
 ![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
 
 ## _*Note:*_   
-This is now *deprecated* and will be soon replaced by `coinbase` a new package. The last stable version of `rgdax` is avalable on CRAN. Coinbase has proposed support for the old GDAX API's till end of 2018 and this package should continue to work till that time. However, no new development will be done on this package. Please direct your issues to [coin base pro repo](https://github.com/DheerajAgarwal/coinbase/issues)
+The previous version is now *deprecated*. Coinbase has support for the old GDAX API's till end of 2018 and version 0.6 package should continue to work till that time. This new version is likely to break the previous ones and hence, it is recommended that all users shold test this out with their existing applications and make changes as necessary.
 
-This package is inspired by official and unofficial wrappers for [GDAX API](https://docs.gdax.com/#api).
+This package is inspired by official and unofficial wrappers for [Coinbase Pro API](https://docs.pro.coinbase.com/#api)).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
 
 There are two main groups of api end points.
 
 **Public:** All functions belonging to this group start with `public_` and can be used without any authentication.
 
-**Auth:** This category of functions will require _API Key_, _API Secret_ and _Passphrase_ to connect successfully to the account. To get your api keys, refer to [how to create GDAX api keys](
-    https://support.gdax.com/customer/en/portal/articles/2425383-how-can-i-create-an-api-key-for-gdax-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
+**Auth:** This category of functions will require _API Key_, _API Secret_ and _Passphrase_ to connect successfully to the account. To get your api keys, refer to [how to create Coinbase Pro api keys](https://support.pro.coinbase.com/customer/en/portal/articles/2945320-how-do-i-create-an-api-key-for-coinbase-pro-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
     
 ## What is New in this version
 
-[News](./NEWS.md)
+[News](./NEWS.md)  
 
 ## Supported Functions
 
@@ -69,18 +68,8 @@ library(devtools)
 install_github("DheerajAgarwal/rgdax", ref="dev")
 ```
 
-## Some Inspirations
-
-[Unofficial Python GDAX Wrapper](https://github.com/danpaquin/gdax-python)  #The real reason I started this project.
-
-[coinbaseexchangeenterorder-r](https://gist.github.com/gsee/b20b3b9893cd74e462a8) #Helped me break the auth calls.
-
-[MTDO's Shiny App](https://github.com/mtdo/shiny-gdax) #For the data cleaning of most public functions.
-
 ## URLs   
 [github CRAN](https://github.com/DheerajAgarwal/rgdax/tree/master)
-
-[bitbucket DEV](https://bitbucket.org/DheerajdrjAgarwal/rgdax)
 
 [github DEV](https://github.com/DheerajAgarwal/rgdax)
 

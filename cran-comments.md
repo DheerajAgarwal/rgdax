@@ -2,6 +2,7 @@
 ## First revision comments for version 1.0.0
 
 * Made changes to Author's tag based on recommendation from CRAN
+* Changed API end point
 
 # Date Feb 18 2018
 ## First revision comments for version 0.3.0

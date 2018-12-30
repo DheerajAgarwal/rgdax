@@ -10,7 +10,7 @@
 
 parse_response <- function(path, query = NULL) {
   #define api base url----
-  api.url <- "https://api.gdax.com"
+  api.url <- "https://api.pro.coinbase.com"
 
   #create final end point----
   url <- modify_url(api.url, path = path, query = query)

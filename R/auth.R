@@ -26,7 +26,7 @@ auth <- function(method,
                  passphrase,
                  order = NULL) {
   #define api base url----
-  api.url <- "https://api.gdax.com"
+  api.url <- "https://api.pro.coinbase.com"
 
   #generate nonce and key encodings----
   url <- paste0(api.url, req.url)

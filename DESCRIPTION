@@ -1,20 +1,18 @@
 Package: rgdax
 Type: Package
-Title: Deprecated Wrapper for 'GDAX' Cryptocurrency Exchange
+Title: Wrapper for 'Coinbase Pro (GDAX)' Cryptocurrency Exchange
 Version: 1.0.0
 Authors@R: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Dheeraj Agarwal <dheeeraj.agarwal@gmail.com>
-Description: Allow access to both public and private end points to 'GDAX' cryptocurrency exchange.
-    For authenticated flow, users must have valid api, secret and passphrase to be able to connect.
-    This package is now not maintained because of API end point changes by Coinbase. 
-    This package, however will continue to work till end of 2018, the proposed support by coinbase.
+Description: Allow access to both public and private end points to Coinbase Pro (erstwhile GDAX) 
+    cryptocurrency exchange. For authenticated flow, users must have valid api, secret and passphrase to be able to connect.
 URL: https://github.com/DheerajAgarwal/rgdax/
 BugReports: https://github.com/DheerajAgarwal/rgdax/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Depends:
   R(>= 3.1.0),
   digest,
