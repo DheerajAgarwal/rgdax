@@ -2,7 +2,7 @@
 
 ## Version?
 
-[0.6.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+[0.6.0](https://github.com/DheerajAgarwal/rgdax/tree/rgdax_0.6)  
 
 ## What's New?
 
