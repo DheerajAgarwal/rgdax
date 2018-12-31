@@ -15,44 +15,97 @@ There are two main groups of api end points.
 **Public:** All functions belonging to this group start with `public_` and can be used without any authentication.
 
 **Auth:** This category of functions will require _API Key_, _API Secret_ and _Passphrase_ to connect successfully to the account. To get your api keys, refer to [how to create Coinbase Pro api keys](https://support.pro.coinbase.com/customer/en/portal/articles/2945320-how-do-i-create-an-api-key-for-coinbase-pro-). The behavior of the functions will also depend upon what kind of access (view, trade or manage) the api keys have.
-    
+
 ## What is New in this version
 
 [News](./NEWS.md)  
 
 ## Supported Functions
 
-***Complete List of Supported Public Functions:***
+***Complete List of Supported Public Functions & Coinbase Pro end point mapping:***
 
-1. candles
-2. daystats
-3. info
-4. orderbook
-5. ticker
-6. time
-7. trades
+|#|function|public mapping|
+|-|-|-|
+|01|candles|[historic rates](https://docs.pro.coinbase.com/#get-historic-rates)|
+|02|daystats|[24hr stats](https://docs.pro.coinbase.com/#get-24hr-stats)|
+|03|info|[currencies](https://docs.pro.coinbase.com/#get-currencies) & [products](https://docs.pro.coinbase.com/#get-products)|
+|04|orderbook|[product orderbook](https://docs.pro.coinbase.com/#get-product-order-book)|
+|05|ticker|[product ticker](https://docs.pro.coinbase.com/#get-product-ticker)|
+|06|time|[time](https://docs.pro.coinbase.com/#time)|
+|07|trades|[trades](https://docs.pro.coinbase.com/#get-trades)|
 
-***Complete List of Supported Auth Functions:***
+***Complete List of Supported Auth Functions & Coinbase Pro end point mapping:***
 
-1. account_hist
-2. account
-3. accounts
-4. add_order
-5. cancel_order
-6. fills
-7. holds
-8. profile
-9. pymt_methods
+**Accounts**  
+
+|#|function|auth mapping|
+|-|-|-|
+|08|accounts|[list accounts](https://docs.pro.coinbase.com/#list-accounts)|
+|09|account|[an account](https://docs.pro.coinbase.com/#get-an-account)|
+|10|account_hist|[account history](https://docs.pro.coinbase.com/#get-account-history)|
+|11|holds|[holds](https://docs.pro.coinbase.com/#get-holds)|
+
+
+**Orders**  
+
+|#|function|auth mapping|
+|-|-|-|
+|12|add_order|[place a new order](https://docs.pro.coinbase.com/#place-a-new-order)|
+|13|cancel_order|[cancel an order](https://docs.pro.coinbase.com/#cancel-an-order) & [cancel all](https://docs.pro.coinbase.com/#cancel-all)|
+
+**Others**  
+
+|#|function|auth mapping|
+|-|-|-|
+|14|fills|[list fills](https://docs.pro.coinbase.com/#fills)|
+|15|pymt_methods|[list payment methods](https://docs.pro.coinbase.com/#list-payment-methods)|
 
 Apart from these two categories, the library also contains a few internal functions which are used across the public and the auth functions:
 
 1. parse_response
 2. auth
 
-## Limitations:
-The current version does not support the following key capabilities:
+## Currently Unsupported Functions
+
+**Orders**  
+
+|#|function|auth mapping|
+|-|-|-|
+|XX|pending|[list order](https://docs.pro.coinbase.com/#list-orders)|
+|XX|pending|[get an order](https://docs.pro.coinbase.com/#get-an-order)|
+
+**Deposits**  
+
+|#|function|auth mapping|
+|-|-|-|
+|XX|pending|[payment method](https://docs.pro.coinbase.com/#payment-method)|
+|XX|pending|[coinbase](https://docs.pro.coinbase.com/#coinbase)|
+
+**Withdrawls**  
+
+|#|function|auth mapping|
+|-|-|-|
+|XX|pending|[payment method](https://docs.pro.coinbase.com/#payment-method48)|
+|XX|pending|[coinbase](https://docs.pro.coinbase.com/#coinbase49)|
+|XX|pending|[crypto](https://docs.pro.coinbase.com/#crypto)|
+
+**Reports**  
+
+|#|function|auth mapping|
+|-|-|-|
+|XX|pending|[create a new report](https://docs.pro.coinbase.com/#create-a-new-report)|
+|XX|pending|[report status](https://docs.pro.coinbase.com/#get-report-status)|
+
+**Others**
+
+|#|function|auth mapping|
+|-|-|-|
+|XX|pending|[create conversion](https://docs.pro.coinbase.com/#create-conversion)|
+|XX|pending|[list coinbase accounts](https://docs.pro.coinbase.com/#list-accounts56)|
+|XX|pending|[trailing volume](https://docs.pro.coinbase.com/#trailing-volume)|
+
+Apart from the above listed pending functions, the current version does not support the following key capabilities:
 1. Pagination   
-2. Make deposits or withdrawls
 
 ## How to install:
 
