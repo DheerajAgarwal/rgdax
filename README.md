@@ -123,7 +123,7 @@ install_github("DheerajAgarwal/rgdax", ref="dev")
 
 ## URLs   
 
-[rgdax CRAN](https://cran.r-project.org/web/packages/rgdax/index.html)
+[rgdax CRAN](https://CRAN.R-project.org/package=rgdax)
 
 [CRAN codebase](https://github.com/DheerajAgarwal/rgdax/tree/master)
 
