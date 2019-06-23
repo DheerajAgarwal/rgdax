@@ -60,13 +60,13 @@ auth <- function(method,
   if (method == "GET") {
     #Get test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- fromJSON(rawToChar(
+      response <- fromJSON(
         getURLContent(
           url = url,
           curl = getCurlHandle(useragent = "R"),
           httpheader = httpheader
         )
-      ))
+      )
     }
     #Get test windows----
     else {
@@ -81,14 +81,14 @@ auth <- function(method,
   else if (method == "POST") {
     #Post test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- fromJSON(rawToChar(
+      response <- fromJSON(
         getURLContent(
           url = url,
           curl = getCurlHandle(useragent = "R"),
           httpheader = httpheader,
           postfields = order
         )
-      ))
+      )
     }
     #Post test windows----
     else{
@@ -106,11 +106,11 @@ auth <- function(method,
   else if (method == "DELETE") {
     #Post test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- fromJSON(rawToChar(httpDELETE(
+      response <- fromJSON(httpDELETE(
         url = url,
         curl = getCurlHandle(useragent = "R"),
         httpheader = httpheader
-      )))
+      ))
     } else {
       response <- fromJSON(httpDELETE(
         url = url,
