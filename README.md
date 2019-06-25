@@ -118,7 +118,7 @@ This is same as installing `master` branch from github.
 **From Github dev**
 ```
 library(devtools)
-install_github("angelaponte/rgdax", ref="dev")
+install_github("DheerajAgarwal/rgdax", ref="dev")
 ```
 
 ## URLs   
