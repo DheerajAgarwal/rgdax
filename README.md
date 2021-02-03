@@ -52,13 +52,14 @@ There are two main groups of api end points.
 |-|-|-|
 |12|add_order|[place a new order](https://docs.pro.coinbase.com/#place-a-new-order)|
 |13|cancel_order|[cancel an order](https://docs.pro.coinbase.com/#cancel-an-order) & [cancel all](https://docs.pro.coinbase.com/#cancel-all)|
+|14|list_orders|[list order](https://docs.pro.coinbase.com/#list-orders)|
 
 **Others**  
 
 |#|function|auth mapping|
 |-|-|-|
-|14|fills|[list fills](https://docs.pro.coinbase.com/#fills)|
-|15|pymt_methods|[list payment methods](https://docs.pro.coinbase.com/#list-payment-methods)|
+|15|fills|[list fills](https://docs.pro.coinbase.com/#fills)|
+|16|pymt_methods|[list payment methods](https://docs.pro.coinbase.com/#list-payment-methods)|
 
 Apart from these two categories, the library also contains a few internal functions which are used across the public and the auth functions:
 
@@ -71,7 +72,6 @@ Apart from these two categories, the library also contains a few internal functi
 
 |#|function|auth mapping|
 |-|-|-|
-|XX|pending|[list order](https://docs.pro.coinbase.com/#list-orders)|
 |XX|pending|[get an order](https://docs.pro.coinbase.com/#get-an-order)|
 
 **Deposits**  
