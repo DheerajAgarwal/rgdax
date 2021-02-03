@@ -1,11 +1,11 @@
-# rgdax 1.0.0
+# rgdax 1.0.1
 
 [![Build Status](https://travis-ci.org/DheerajAgarwal/rgdax.png?branch=dev)](https://travis-ci.org/DheerajAgarwal/rgdax)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
 ![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
 
 ## _*Note:*_   
-The previous version is now *deprecated*. Coinbase had support for the old GDAX API's till end of 2018 only. This new version is likely to break the previous ones and hence, it is recommended that all users should test this out with their existing applications and make changes as necessary.
+The version less than 1 is now *deprecated*. Coinbase had support for the old GDAX API's till end of 2018 only. Version 1.0 onwards may break the previous implementations and hence, it is recommended that all users should test this out with their existing applications (bulit pre-jan 2019) and make changes as necessary.
 
 This package is inspired by official and unofficial wrappers for [Coinbase Pro API](https://docs.pro.coinbase.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.

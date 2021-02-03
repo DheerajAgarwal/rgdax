@@ -10,9 +10,9 @@ public_candles(product_id = "LTC-USD", start = NULL, end = NULL,
 \arguments{
 \item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
 
-\item{start}{Optional parameter. Start time in ISO 8601}
+\item{start}{Optional parameter. Start time in ISO 8601. Must be within quotes}
 
-\item{end}{Optional parameter. End time in ISO 8601}
+\item{end}{Optional parameter. End time in ISO 8601. Must be within quotes}
 
 \item{granularity}{Optional parameter. Desired timeslice in seconds. The granularity field must be one of the following values: \code{60, 300, 900, 3600, 21600, 86400}. Otherwise, the request will be rejected. These values correspond to timeslices representing one minute, five minutes, fifteen minutes, one hour, six hours, and one day, respectively.}
 }
@@ -26,6 +26,8 @@ This function is a public function and will fetch historic rates for provided cu
 \dontrun{
 public_candles()
 public_candles("ETH-EUR")
+public_candles(granularity=86400)
+public_candles(product_id="BTC-USD", start="2018-01-01", end="2018-02-01",granularity=86400)
 }
 
 }

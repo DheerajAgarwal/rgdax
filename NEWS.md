@@ -2,7 +2,20 @@
 
 ## Version?
 
-[1.0.0](https://github.com/DheerajAgarwal/rgdax/tree/rgdax_0.6)  
+[1.0.1](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+
+## What's New?
+
+#### Bug fixes:
+
+_None_
+
+#### Enhancements:
+
+_1. Updated documentation to provide clarity on date usage for `public_candles()`_
+_2. Created new function `list_orders()` via pull request contribution from [skivalov](https://github.com/skivalov). Related documentation update_
+
+[1.0.0](https://github.com/DheerajAgarwal/rgdax/tree/master)  
 
 ## What's New?
 

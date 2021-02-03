@@ -1,7 +1,7 @@
 Package: rgdax
 Type: Package
 Title: Wrapper for 'Coinbase Pro (GDAX)' Cryptocurrency Exchange
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Dheeraj Agarwal <dheeeraj.agarwal@gmail.com>
