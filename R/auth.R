@@ -47,14 +47,13 @@ auth <- function(method,
   sign <-
     base64Encode(hmac(key, what, algo = "sha256", raw = TRUE)) # hash
 
-  #define headers----
-  httpheader <- list(
-    'CB-ACCESS-KEY' = api.key,
-    'CB-ACCESS-SIGN' = sign,
-    'CB-ACCESS-TIMESTAMP' = timestamp,
-    'CB-ACCESS-PASSPHRASE' = passphrase,
-    'Content-Type' = 'application/json'
-  )
+#define headers----
+  httpheader <- "'CB-ACCESS-KEY' = api.key,
+      'CB-ACCESS-SIGN' = sign,
+      'CB-ACCESS-TIMESTAMP' = timestamp,
+      'CB-ACCESS-PASSPHRASE' = passphrase,
+      'Content-Type' = 'application/json'"
+
 
   #generating GET results----
   if (method == "GET") {
@@ -70,11 +69,11 @@ auth <- function(method,
     }
     #Get test windows----
     else {
-      response <- fromJSON(getURLContent(
-        url = url,
-        curl = getCurlHandle(useragent = "R"),
-        httpheader = httpheader
-      ))
+
+      response <-eval(parse(text = paste("GET(url=url, add_headers(", httpheader, "))")))
+      response <- content(response, as = "text", encoding = "UTF-8")
+      response <- fromJSON(response, flatten = TRUE)
+
     }
   }
   #generating POST results----
@@ -92,14 +91,12 @@ auth <- function(method,
     }
     #Post test windows----
     else{
-      response <- fromJSON(
-        getURLContent(
-          url = url,
-          curl = getCurlHandle(useragent = "R"),
-          httpheader = httpheader,
-          postfields = order
-        )
-      )
+
+      response <-eval(parse(text = paste("POST(url=url, add_headers(", httpheader, "), body = order)")))
+      response <- content(response, as = "text", encoding = "UTF-8")
+      response <- fromJSON(response, flatten = TRUE)
+      message(paste("method: ", method, sep=""))
+      message(paste("url: ", url, sep=""))
     }
   }
   #Generating DELETE results
@@ -112,11 +109,11 @@ auth <- function(method,
         httpheader = httpheader
       ))
     } else {
-      response <- fromJSON(httpDELETE(
-        url = url,
-        curl = getCurlHandle(useragent = "R"),
-        httpheader = httpheader
-      ))
+
+      response <-eval(parse(text = paste("DELETE(url=url, add_headers(", httpheader, "))")))
+      response <- content(response, as = "text", encoding = "UTF-8")
+      response <- fromJSON(response, flatten = TRUE)
+
     }
   }
 

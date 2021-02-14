@@ -41,15 +41,15 @@ add_order <- function(api.key,
                       size) {
   #get url extension----
   req.url <- "/orders"
-
+  
   #define method----
   method <-  "POST"
-
+  
   #transform params----
   product_id <- toupper(product_id)
   price <- as.character(price)
   size <- as.character(size)
-
+  
   if (side == "b") {
     side <- "buy"
   } else if (side == "s") {
@@ -57,7 +57,7 @@ add_order <- function(api.key,
   } else {
     stop("Unrecognized sell or buy side. Please select either 'b' or 's'.")
   }
-
+  
   #generate order----
   if (is.null(stop)) {
     order_attribs <- list(
@@ -77,9 +77,9 @@ add_order <- function(api.key,
       stop_price = stop_price
     )
   }
-
+  
   order <- toJSON(order_attribs, auto_unbox = TRUE)
-
+  
   #fetch response----
   response <-
     auth(
@@ -90,10 +90,10 @@ add_order <- function(api.key,
       passphrase = passphrase,
       order = order
     )
-
+  
   #transform----
   response <- as.data.frame(response)
-
+  
   #return----
   return(response)
 }

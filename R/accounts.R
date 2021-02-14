@@ -21,11 +21,11 @@ accounts <- function(api.key,
                      secret,
                      passphrase)  {
   #get url extension----
-  req.url <-  "/accounts/"
-
+  req.url <-  "/accounts"
+  
   #define method----
   method <- "GET"
-
+  
   #fetch response----
   response <- auth(
     method = method,
@@ -34,12 +34,12 @@ accounts <- function(api.key,
     secret = secret,
     passphrase = passphrase
   )
-
+  
   #transform----
   response$balance <- as.numeric(response$balance)
   response$available <- as.numeric(response$available)
   response$hold <- as.numeric(response$hold)
-
+  
   #return----
   return(response)
 }
