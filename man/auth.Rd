@@ -2,9 +2,9 @@
 % Please edit documentation in R/auth.R
 \name{auth}
 \alias{auth}
-\title{Parse Authenticated Calls To GDAX API}
+\title{Parse Authenticated Calls To COINBASE PRO (GDAX) API}
 \usage{
-auth(method, req.url, api.key, secret, passphrase, order = NULL)
+auth(method, req.url = "/accounts/", api.key, secret, passphrase, order = NULL)
 }
 \arguments{
 \item{method}{Mandatory character value. Value must be upper case.}
@@ -23,5 +23,5 @@ auth(method, req.url, api.key, secret, passphrase, order = NULL)
 A named list of server response.
 }
 \description{
-This is an internal function that will be used for all private connections to the user account. This function determines the kind of GDAX call (GET / POST / DELETE).
+This is an internal function that will be used for all private connections to the user account. This function determines the kind of API call (GET / POST / DELETE).
 }

@@ -40,7 +40,7 @@ account <- function(acct_id,
   )
 
   #transform----
-  response <- as.data.frame(response)
+  response <- ldply(response, data.frame)
 
   #return----
   return(response)

@@ -1,9 +1,9 @@
-#' Parse Authenticated Calls To GDAX API
+#' Parse Authenticated Calls To COINBASE PRO (GDAX) API
 #'
 #'
 #' @name auth
 #'
-#' @description This is an internal function that will be used for all private connections to the user account. This function determines the kind of GDAX call (GET / POST / DELETE).
+#' @description This is an internal function that will be used for all private connections to the user account. This function determines the kind of API call (GET / POST / DELETE).
 #'
 #' @param method Mandatory character value. Value must be upper case.
 #' @param req.url THE URL component for the API. Default to "/accounts".
@@ -15,12 +15,12 @@
 #' @return  A named list of server response.
 #'
 #' @import digest
-#'
+#' @import httr
 
 
 # function definition ----
 auth <- function(method,
-                 req.url,
+                 req.url = "/accounts/",
                  api.key,
                  secret,
                  passphrase,
@@ -48,7 +48,7 @@ auth <- function(method,
     base64Encode(hmac(key, what, algo = "sha256", raw = TRUE)) # hash
 
   #define headers----
-  httpheader <- list(
+  httpheader <- c(
     'CB-ACCESS-KEY' = api.key,
     'CB-ACCESS-SIGN' = sign,
     'CB-ACCESS-TIMESTAMP' = timestamp,
@@ -60,63 +60,59 @@ auth <- function(method,
   if (method == "GET") {
     #Get test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- fromJSON(
-        getURLContent(
-          url = url,
-          curl = getCurlHandle(useragent = "R"),
-          httpheader = httpheader
-        )
-      )
+      response <- content(httr::GET(url, add_headers(httpheader)))
     }
     #Get test windows----
     else {
-      response <- fromJSON(getURLContent(
-        url = url,
-        curl = getCurlHandle(useragent = "R"),
-        httpheader = httpheader
-      ))
+      response <- content(httr::GET(url, add_headers(httpheader)))
     }
   }
   #generating POST results----
   else if (method == "POST") {
     #Post test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- fromJSON(
-        getURLContent(
-          url = url,
-          curl = getCurlHandle(useragent = "R"),
-          httpheader = httpheader,
-          postfields = order
-        )
-      )
+      response <- content(httr::POST(url, add_headers(httpheader)))
+      # response <- fromJSON(
+      #   getURLContent(
+      #     url = url,
+      #     curl = getCurlHandle(useragent = "R"),
+      #     httpheader = httpheader,
+      #     postfields = order
+      #   )
+      # )
     }
     #Post test windows----
     else{
-      response <- fromJSON(
-        getURLContent(
-          url = url,
-          curl = getCurlHandle(useragent = "R"),
-          httpheader = httpheader,
-          postfields = order
-        )
-      )
+      response <- content(httr::POST(url, add_headers(httpheader)))
+      # response <- fromJSON(
+      #   getURLContent(
+      #     url = url,
+      #     curl = getCurlHandle(useragent = "R"),
+      #     httpheader = httpheader,
+      #     postfields = order
+      #   )
+      # )
     }
   }
-  #Generating DELETE results
+  #Generating DELETE results----
   else if (method == "DELETE") {
-    #Post test macOS----
+    #Delete test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- fromJSON(httpDELETE(
-        url = url,
-        curl = getCurlHandle(useragent = "R"),
-        httpheader = httpheader
-      ))
-    } else {
-      response <- fromJSON(httpDELETE(
-        url = url,
-        curl = getCurlHandle(useragent = "R"),
-        httpheader = httpheader
-      ))
+      response <- content(httr::POST(url, add_headers(httpheader)))
+      # response <- fromJSON(httpDELETE(
+      #   url = url,
+      #   curl = getCurlHandle(useragent = "R"),
+      #   httpheader = httpheader
+      # ))
+    }
+    #Delete test windows----
+    else {
+      response <- content(httr::POST(url, add_headers(httpheader)))
+      # response <- fromJSON(httpDELETE(
+      #   url = url,
+      #   curl = getCurlHandle(useragent = "R"),
+      #   httpheader = httpheader
+      # ))
     }
   }
 

@@ -50,6 +50,8 @@ account_hist <- function(currency = "LTC",
     )
 
     #transform----
+    response <- ldply(response, data.frame)
+
     response$id <- as.character(response$id)
     response$amount <- as.numeric(response$amount)
     response$balance <- as.numeric(response$balance)
