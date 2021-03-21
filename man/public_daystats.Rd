@@ -4,10 +4,10 @@
 \alias{public_daystats}
 \title{24 Hour Stats For A Given Product}
 \usage{
-public_daystats(product_id = "LTC-USD")
+public_daystats(product_id = "BTC-USD")
 }
 \arguments{
-\item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
+\item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'BTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
 }
 \value{
 Dataframe with a single row of product's last 24 hour stats.

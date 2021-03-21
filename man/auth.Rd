@@ -2,7 +2,7 @@
 % Please edit documentation in R/auth.R
 \name{auth}
 \alias{auth}
-\title{Parse Authenticated Calls To COINBASE PRO (GDAX) API}
+\title{Parse Authenticated Calls To COINBASE PRO (erstwhile GDAX) API}
 \usage{
 auth(method, req.url = "/accounts/", api.key, secret, passphrase, order = NULL)
 }

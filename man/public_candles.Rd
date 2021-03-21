@@ -5,7 +5,7 @@
 \title{Get bids and asks for provided currency-pair (products) by GDAX.}
 \usage{
 public_candles(
-  product_id = "LTC-USD",
+  product_id = "BTC-USD",
   start = NULL,
   end = NULL,
   granularity = NULL

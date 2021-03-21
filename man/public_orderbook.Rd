@@ -4,10 +4,10 @@
 \alias{public_orderbook}
 \title{Get bids and asks for provided currency-pair (products) by GDAX.}
 \usage{
-public_orderbook(product_id = "LTC-USD", level = 1)
+public_orderbook(product_id = "BTC-USD", level = 1)
 }
 \arguments{
-\item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'LTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
+\item{product_id}{Optional character parameter. This is a case insensitive value of the product id for which the order book is desired. Default to \code{'BTC-USD'}. For all valid product ids, refer to \code{\link{public_info}}.}
 
 \item{level}{Optional parameter. Integer value of level denoting level of detail. Valid user values of 1, 2, 3. Default to 1.}
 }
