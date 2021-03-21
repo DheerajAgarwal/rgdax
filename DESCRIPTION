@@ -1,7 +1,7 @@
 Package: rgdax
 Type: Package
-Title: Wrapper for 'Coinbase Pro (GDAX)' Cryptocurrency Exchange
-Version: 1.0.1
+Title: Wrapper for 'Coinbase Pro (erstwhile GDAX)' Cryptocurrency Exchange
+Version: 1.1.0
 Authors@R: person("Dheeraj", "Agarwal", email = "dheeeraj.agarwal@gmail.com",
                   role = c("aut", "cre"))
 Maintainer: Dheeraj Agarwal <dheeeraj.agarwal@gmail.com>
@@ -14,9 +14,10 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Depends:
-  R(>= 3.1.0),
+  R(>= 4.0.4),
   digest,
   jsonlite,
   RCurl,
   httr
+  plyr
 Suggests: testthat
