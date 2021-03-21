@@ -1,4 +1,4 @@
-#' Parse Authenticated Calls To COINBASE PRO (GDAX) API
+#' Parse Authenticated Calls To COINBASE PRO (erstwhile GDAX) API
 #'
 #'
 #' @name auth
@@ -27,6 +27,7 @@ auth <- function(method,
                  order = NULL) {
   #define api base url----
   api.url <- "https://api.pro.coinbase.com"
+  # api.url <- "https://api-public.sandbox.pro.coinbase.com"
 
   #generate nonce and key encodings----
   url <- paste0(api.url, req.url)
@@ -35,12 +36,12 @@ auth <- function(method,
   key <- base64Decode(secret, mode = "raw") # encode api secret
 
   #create final end point----
-  if (method == "GET") {
+  if (method == "GET" | method == "DELETE") {
     what <- paste0(timestamp, method, req.url) # get method
   } else if (method == "POST") {
     what <- paste0(timestamp, method, req.url, order)
-  } else if (method == "DELETE") {
-    what <- paste0(timestamp, method, req.url)
+  } else {
+    print("Undefined Method")
   }
 
   #create encoded signature----
@@ -71,48 +72,22 @@ auth <- function(method,
   else if (method == "POST") {
     #Post test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- content(httr::POST(url, add_headers(httpheader)))
-      # response <- fromJSON(
-      #   getURLContent(
-      #     url = url,
-      #     curl = getCurlHandle(useragent = "R"),
-      #     httpheader = httpheader,
-      #     postfields = order
-      #   )
-      # )
+      response <- content(httr::POST(url, add_headers(httpheader), body = order) )
     }
     #Post test windows----
     else{
-      response <- content(httr::POST(url, add_headers(httpheader)))
-      # response <- fromJSON(
-      #   getURLContent(
-      #     url = url,
-      #     curl = getCurlHandle(useragent = "R"),
-      #     httpheader = httpheader,
-      #     postfields = order
-      #   )
-      # )
+      response <- content(httr::POST(url, add_headers(httpheader), body = order))
     }
   }
   #Generating DELETE results----
   else if (method == "DELETE") {
     #Delete test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- content(httr::POST(url, add_headers(httpheader)))
-      # response <- fromJSON(httpDELETE(
-      #   url = url,
-      #   curl = getCurlHandle(useragent = "R"),
-      #   httpheader = httpheader
-      # ))
+      response <- content(httr::DELETE(url, add_headers(httpheader)))
     }
     #Delete test windows----
     else {
-      response <- content(httr::POST(url, add_headers(httpheader)))
-      # response <- fromJSON(httpDELETE(
-      #   url = url,
-      #   curl = getCurlHandle(useragent = "R"),
-      #   httpheader = httpheader
-      # ))
+      response <- content(httr::DELETE(url, add_headers(httpheader)))
     }
   }
 

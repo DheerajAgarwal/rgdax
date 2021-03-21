@@ -16,7 +16,7 @@
 #'
 #' @export
 
-
+# output tested on WIN. Macos pending.
 public_trades <- function(product_id = "BTC-USD") {
   #case remediation----
   product_id <- toupper(product_id)
@@ -25,11 +25,10 @@ public_trades <- function(product_id = "BTC-USD") {
   req.url <- paste0("/products/", product_id, "/trades")
 
   #fetch response----
-  content <- parse_response(path = req.url)
+  response <- parse_response(path = req.url)
 
   #transform----
-  content <-
-    content[order(content$trade_id),] # sort chorologically by trade ids
+  content <- as.data.frame(fromJSON(rawToChar(response$content)))
   content$time <- strptime(content$time, "%Y-%m-%dT%H:%M:%OS")
   content$price <- as.numeric(content$price)
   content$size <- as.numeric(content$size)

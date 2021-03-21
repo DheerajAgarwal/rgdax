@@ -19,8 +19,8 @@
 #'
 #' @export
 
-
-public_candles <- function(product_id = "LTC-USD",
+# output tested on WIN. Macos pending
+public_candles <- function(product_id = "BTC-USD",
                            start = NULL,
                            end = NULL,
                            granularity = NULL) {
@@ -31,9 +31,9 @@ public_candles <- function(product_id = "LTC-USD",
   req.url <- paste0("/products/", product_id, "/candles")
 
   #fetch response----
-  content <- parse_response(
+  response <- parse_response(
     path = req.url,
-    query = list(
+    query = c(
       "start" = start,
       "end" = end,
       "granularity" = granularity
@@ -41,7 +41,8 @@ public_candles <- function(product_id = "LTC-USD",
   )
 
   #transform----
-  content <- as.data.frame(content)
+
+  content <- as.data.frame(fromJSON(rawToChar(response$content)))
   content <-
     content[order(content$V1), ] # sort chorologically by time since epoch
   names(content) <-

@@ -17,7 +17,7 @@
 #'
 #' @export
 
-
+# output tested on WIN. Macos pending
 pymt_methods <- function(api.key,
                          secret,
                          passphrase) {
@@ -35,6 +35,9 @@ pymt_methods <- function(api.key,
     secret = secret,
     passphrase = passphrase
   )
+
+  #transform----
+  payment_methods <- ldply(payment_methods, as.data.frame)
 
   #return----
   return(payment_methods)

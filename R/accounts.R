@@ -17,6 +17,9 @@
 #'
 #' @export
 
+
+# Output tested on Win. Macos pending
+
 accounts <- function(api.key,
                      secret,
                      passphrase)  {
@@ -39,9 +42,9 @@ accounts <- function(api.key,
   #transform----
   response <- ldply(response, data.frame)
 
-  response$balance <- as.numeric(response$balance)
-  response$available <- as.numeric(response$available)
-  response$hold <- as.numeric(response$hold)
+  # response$balance <- as.numeric(response$balance)
+  # response$available <- as.numeric(response$available)
+  # response$hold <- as.numeric(response$hold)
 
   #return----
   return(response)

@@ -16,7 +16,7 @@
 #'
 #' @export
 
-
+# output tested on WIN. Macos pending.
 public_ticker <- function(product_id = "BTC-USD") {
   #case remediation----
   product_id <- toupper(product_id)
@@ -25,16 +25,11 @@ public_ticker <- function(product_id = "BTC-USD") {
   req.url <- paste0("/products/", product_id, "/ticker")
 
   #fetch response----
-  content <- parse_response(path = req.url)
+  response <- parse_response(path = req.url)
 
   #transform----
+  content <- as.data.frame(fromJSON(rawToChar(response$content)))
   content$time <- strptime(content$time, "%Y-%m-%dT%H:%M:%OS")
-  content$price <- as.numeric(content$price)
-  content$size <- as.numeric(content$size)
-  content$bid <- as.numeric(content$bid)
-  content$ask <- as.numeric(content$ask)
-  content$volume <- as.numeric(content$volume)
-  content <- as.data.frame(content)
 
   #return----
   return(content)

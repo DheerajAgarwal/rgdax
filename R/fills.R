@@ -16,12 +16,12 @@
 #' fills(api.key = your_key,
 #' secret = your_api_secret,
 #' passphrase = your_api_pass,
-#' product_id = "LTC-USD")
+#' product_id = "BTC-USD")
 #' }
 #'
 #' @export
 
-
+# output tested on WIN. Macos pending
 fills <-
   function(api.key,
            secret,
@@ -49,11 +49,7 @@ fills <-
     )
 
     #transform----
-    fills$price <- as.numeric(fills$price)
-    fills$size <- as.numeric(fills$size)
-    fills$fee <- as.numeric(fills$fee)
-    fills$usd_volume <- as.numeric(fills$usd_volume)
-    fills$created_at <- strptime(fills$created_at, "%Y-%m-%dT%H:%M:%OS")
+    fills <- ldply(fills, data.frame)
 
     #return----
     return(fills)

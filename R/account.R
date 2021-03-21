@@ -20,6 +20,9 @@
 #'
 #' @export
 
+
+## ----- Output format Tested on Windows. Mac pending
+
 account <- function(acct_id,
                     api.key,
                     secret,

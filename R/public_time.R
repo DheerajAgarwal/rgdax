@@ -13,17 +13,17 @@
 #'
 #' @export
 
-
+# output tested on WIN. Macos pending.
 public_time <- function() {
 
   #get url extension----
   req.url <- "/time"
 
   #fetch response----
-  content <- parse_response(path = req.url)
+  response <- parse_response(path = req.url)
 
   #transform----
-  content <- as.data.frame(content)
+  content <- as.data.frame(fromJSON(rawToChar(response$content)))
   content$iso <- strptime(content$iso, "%Y-%m-%dT%H:%M:%OS")
 
   #return----

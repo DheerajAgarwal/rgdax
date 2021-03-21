@@ -17,6 +17,7 @@
 #'
 #' @export
 
+# output tested on WIN. Macos pending
 open_orders <- function(api.key,
                        secret,
                        passphrase) {
@@ -36,9 +37,8 @@ open_orders <- function(api.key,
   )
 
   #transform----
-  # response$id <- as.character(response$id)
-  # response$amount <- as.numeric(response$amount)
-  # response$balance <- as.numeric(response$balance)
+  response <- ldply(response, data.frame)
+
 
   #return----
   return(response)

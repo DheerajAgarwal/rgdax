@@ -21,7 +21,7 @@
 #'
 #' @export
 
-
+# output tested on WIN. Macos pending
 public_info <- function(product = TRUE) {
   #get url extension----
   if (product | is.na(product)) {
@@ -31,18 +31,10 @@ public_info <- function(product = TRUE) {
   }
 
   #fetch response----
-  content <- parse_response(path = req.url)
+  response <- parse_response(path = req.url)
 
   #transform----
-  if (product | is.na(product)) {
-    content$base_min_size <- as.numeric(content$base_min_size)
-    content$base_max_size <- as.numeric(content$base_max_size)
-    content$quote_increment <- as.numeric(content$quote_increment)
-    content$margin_enabled <- as.logical(content$margin_enabled)
-  } else {
-    content$min_size <- as.numeric(content$min_size)
-  }
-  content <- as.data.frame(content)
+  content <- as.data.frame(fromJSON(rawToChar(response$content)))
 
   #return----
   return(content)
