@@ -16,6 +16,7 @@
 #'
 #' @import digest
 #' @import httr
+#' @import plyr
 
 
 # function definition ----

@@ -7,6 +7,7 @@
 #'
 #' @return  A named list or a dataframe object of the response.
 #'
+#' @import plyr
 
 parse_response <- function(path, query = NULL) {
   #define api base url----
