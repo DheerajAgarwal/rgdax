@@ -23,7 +23,6 @@
 #' }
 #' @export
 
-# Output tested on Win. Macos pending
 cancel_order <- function(order_id = "all",
                          api.key,
                          secret,

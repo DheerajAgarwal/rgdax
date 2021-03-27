@@ -20,7 +20,6 @@
 #'
 #' @export
 
-# output tested on WIN. Macos pending
 account_hist <- function(currency = "BTC",
                          api.key,
                          secret,

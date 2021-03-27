@@ -28,8 +28,6 @@
 #' @importFrom jsonlite toJSON
 #' @export
 
-# output tested on WIN. Macos pending
-
 add_order <- function(api.key,
                       secret,
                       passphrase,

@@ -17,9 +17,6 @@
 #'
 #' @export
 
-
-# Output tested on Win. Macos pending
-
 accounts <- function(api.key,
                      secret,
                      passphrase)  {
