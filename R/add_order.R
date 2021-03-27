@@ -78,12 +78,7 @@ add_order <- function(api.key,
     )
   }
 
-
-  print(order_attribs)
-
   order <- toJSON(order_attribs, auto_unbox = TRUE)
-  print(order)
-  # order <- toJSON(order_attribs, auto_unbox = TRUE)
 
   #fetch response----
   response <-
@@ -97,6 +92,7 @@ add_order <- function(api.key,
     )
 
   #transform----
+  print(paste0("An order with Order id: ",response$id, " was successfully created."))
   response <- as.data.frame(response)
 
   #return----

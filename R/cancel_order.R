@@ -32,10 +32,8 @@ cancel_order <- function(order_id = "all",
   #get url extension----
   if (order_id == "all"){
     req.url <- "/orders/"
-    print(req.url)
   } else {
     req.url <- paste0("/orders/",order_id)
-    print(req.url)
   }
 
 
@@ -54,6 +52,11 @@ cancel_order <- function(order_id = "all",
 
   #transform----
   response <- as.data.frame(response)
+  if(!("message" %in% colnames(response))){
+    print(paste0("Order id: ",response, " was successfully deleted"))
+  } else {
+    print(response$message)
+  }
 
   #return----
   return(response)

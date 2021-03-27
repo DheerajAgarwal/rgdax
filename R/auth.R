@@ -27,8 +27,8 @@ auth <- function(method,
                  passphrase,
                  order = NULL) {
   #define api base url----
-  api.url <- "https://api.pro.coinbase.com"
-  # api.url <- "https://api-public.sandbox.pro.coinbase.com"
+  # api.url <- "https://api.pro.coinbase.com"
+  api.url <- "https://api-public.sandbox.pro.coinbase.com"
 
   #generate nonce and key encodings----
   url <- paste0(api.url, req.url)
@@ -58,37 +58,39 @@ auth <- function(method,
     'Content-Type' = 'application/json'
   )
 
-  #generating GET results----
+  #Generating GET results----
   if (method == "GET") {
     #Get test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- content(httr::GET(url, add_headers(httpheader)))
+      response <- httr::content(httr::GET(url, add_headers(httpheader)))
     }
     #Get test windows----
     else {
-      response <- content(httr::GET(url, add_headers(httpheader)))
+      response <- httr::content(httr::GET(url, add_headers(httpheader)))
     }
   }
-  #generating POST results----
+
+  #Generating POST results----
   else if (method == "POST") {
     #Post test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- content(httr::POST(url, add_headers(httpheader), body = order) )
+      response <- httr::content(httr::POST(url, add_headers(httpheader), body = order) )
     }
     #Post test windows----
     else{
-      response <- content(httr::POST(url, add_headers(httpheader), body = order))
+      response <- httr::content(httr::POST(url, add_headers(httpheader), body = order))
     }
   }
+
   #Generating DELETE results----
   else if (method == "DELETE") {
     #Delete test macOS----
     if (Sys.info()["sysname"] == "Darwin") {
-      response <- content(httr::DELETE(url, add_headers(httpheader)))
+      response <- httr::content(httr::DELETE(url, add_headers(httpheader)))
     }
     #Delete test windows----
     else {
-      response <- content(httr::DELETE(url, add_headers(httpheader)))
+      response <- httr::content(httr::DELETE(url, add_headers(httpheader)))
     }
   }
 
