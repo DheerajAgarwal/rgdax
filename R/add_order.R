@@ -63,7 +63,8 @@ add_order <- function(api.key,
       "price" = price,
       "size" = size,
       "side" = side,
-      "product_id" = product_id
+      "product_id" = product_id,
+      "type" = type
     )
   } else {
     order_attribs <- list(
@@ -72,7 +73,8 @@ add_order <- function(api.key,
       "side" = side,
       "product_id" = product_id,
       "stop" = stop,
-      "stop_price" = stop_price
+      "stop_price" = stop_price,
+      "type" = type
     )
   }
 
