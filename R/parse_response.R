@@ -19,8 +19,6 @@ parse_response <- function(path, query = NA) {
   #fetch response----
   response <- httr::GET(url = url, query = query)
 
-  print(httr::GET(url = url, query))
-
   #validate success----
   if (response$status_code != 200) {
     stop(message)
