@@ -1,6 +1,5 @@
 language: r
 os:
-  - windows
   - osx
   - linux
 r:
