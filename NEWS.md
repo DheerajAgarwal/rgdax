@@ -2,6 +2,27 @@
 
 ## Version?
 
+[1.2.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+
+## What's New?
+
+#### Bug fixes:
+
+Issue relating to `public_candles` and `public_orderbook` fixed.
+
+#### Enhancements:
+
+[1.1.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+
+## What's New?
+This is a totally new implementation based on `httr`. The older versions were built on `RCurl` are now unsupported due to certificate and content structure related issues.
+
+#### Bug fixes:
+
+#### Enhancements:
+All `auth` based functions.
+
+
 [1.0.1](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
 
 ## What's New?

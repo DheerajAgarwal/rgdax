@@ -5,8 +5,7 @@
 ![](https://cranlogs.r-pkg.org/badges/grand-total/rgdax?color=brightgreen)
 
 ## _*Note:*_   
-The version less than 1 and 1.0.1 are now *broken* and *unsupported*. Coinbase had support for the old GDAX API's till end of 2018 only. version 1.0.1 was based on an older impementation of `RCurl` and does not work with latest version of code and the API. 
-Version 1.1 *WILL* break the previous implementations and hence, it is recommended that all users should test this out with their existing applications (bulit pre-March 2021) and make changes as necessary.
+The version less than 1.1.0 are now *broken* and *unsupported*. Coinbase had support for the old GDAX API's only till the end of 2018. Version 1.1 and above *WILL* break the previous implementations and hence, it is recommended that all users should test this extensively with their existing applications (bulit pre-March 2021) and make changes as necessary.
 
 This package is inspired by official and unofficial wrappers for [Coinbase Pro API](https://docs.pro.coinbase.com/#api).
 Please read through the api docs to gain a better understanding of how each end point is likely to work.
