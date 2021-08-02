@@ -1,6 +1,5 @@
 language: r
 os:
-  - osx
   - linux
 r:
   - release
