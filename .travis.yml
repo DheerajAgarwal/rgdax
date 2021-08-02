@@ -1,8 +1,6 @@
 language: r
 os:
   - linux
-  - osx
-  - windows
 r:
   - release
   - devel
