@@ -1,5 +1,8 @@
 # Credentials file
 cred.txt
+cred.md
+cred
+cred.*
 
 # History files
 .Rhistory
