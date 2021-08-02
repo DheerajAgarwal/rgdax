@@ -4,6 +4,9 @@ cred.md
 cred
 cred.*
 
+# Mac junk file
+.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history
