@@ -19,19 +19,11 @@ parse_response <- function(path, query = NA) {
   #fetch response----
   response <- httr::GET(url = url, query = query)
 
-  print("Test~~~~~~~~~")
-
   print(httr::GET(url = url, query))
 
   #validate success----
   if (response$status_code != 200) {
-    # content <- fromJSON(content(response,
-    #                             as = "text"))
-    # message <- content$message
-    # message <- content(httr::GET(url))
     stop(message)
-  } else {
-    # content(httr::GET(url))
   }
 
   #return----
