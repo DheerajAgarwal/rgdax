@@ -9,7 +9,7 @@
 #'
 #' @import plyr
 
-parse_response <- function(path, query = NULL) {
+parse_response <- function(path, query = NA) {
   #define api base url----
   api.url <- "https://api.pro.coinbase.com"
 
@@ -17,7 +17,11 @@ parse_response <- function(path, query = NULL) {
   url <- modify_url(api.url, path = path)
 
   #fetch response----
-  response <- httr::GET(url = url, query)
+  response <- httr::GET(url = url, query = query)
+
+  print("Test~~~~~~~~~")
+
+  print(httr::GET(url = url, query))
 
   #validate success----
   if (response$status_code != 200) {
