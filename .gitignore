@@ -1,3 +1,12 @@
+# Cred files
+cred.txt
+cred.R
+cred.md
+cred.*
+
+# macOS junk files
+.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history
