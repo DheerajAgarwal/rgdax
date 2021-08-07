@@ -1,4 +1,4 @@
-# rgdax 1.2.2
+# rgdax 1.2.3
 
 [![Build Status](https://www.travis-ci.com/DheerajAgarwal/rgdax.svg?branch=master)](https://www.travis-ci.com/DheerajAgarwal/rgdax)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)

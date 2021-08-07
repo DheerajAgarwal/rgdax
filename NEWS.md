@@ -1,8 +1,20 @@
 # NEWS
 
-## Version Details
+## Version Details  
+Only versions that were once on CRAN are tracked here with links. Dev versions may be listed without links.
 
-[1.2.2](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+[1.2.3](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+
+## What's New?
+The `auth` function now supports both the sandbox and production environment which can be changed with a parameter. 
+
+#### Bug fixes:
+None
+
+#### Enhancements:
+_1. `auth` functions now includes support for sandbox._  
+
+[1.2.2] 
 
 ## What's New?
 This is a totally new implementation based on `httr`. The older versions (1.0) were built on `RCurl` are now unsupported due to certificate and content structure related issues. Since version 1.1 new implementation was only on dev branch and was not documented. V1.2.1 is now on CRAN and the doc is up to date. The details below are since V1.0. 
