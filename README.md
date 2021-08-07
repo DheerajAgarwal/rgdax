@@ -1,4 +1,4 @@
-# rgdax 1.2.1
+# rgdax 1.2.2
 
 [![Build Status](https://www.travis-ci.com/DheerajAgarwal/rgdax.svg?branch=master)](https://www.travis-ci.com/DheerajAgarwal/rgdax)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rgdax)](https://cran.r-project.org/package=rgdax)
@@ -21,7 +21,7 @@ There are two main groups of api end points.
 
 ## Supported Functions
 
-***Complete List of Supported Public Functions & Coinbase Pro end point mapping:***
+***Complete List of Supported Public Functions with Coinbase Pro end point mapping:***
 
 |#|function|public mapping|
 |-|-|-|
@@ -33,7 +33,7 @@ There are two main groups of api end points.
 |06|time|[time](https://docs.pro.coinbase.com/#time)|
 |07|trades|[trades](https://docs.pro.coinbase.com/#get-trades)|
 
-***Complete List of Supported Auth Functions & Coinbase Pro end point mapping:***
+***Complete List of Supported Auth Functions with Coinbase Pro end point mapping:***
 
 **Accounts**  
 
@@ -52,6 +52,7 @@ There are two main groups of api end points.
 |12|add_order|[place a new order](https://docs.pro.coinbase.com/#place-a-new-order)|
 |13|cancel_order|[cancel an order](https://docs.pro.coinbase.com/#cancel-an-order) & [cancel all](https://docs.pro.coinbase.com/#cancel-all)|
 |14|list_orders|[list order](https://docs.pro.coinbase.com/#list-orders)|
+|XX|PENDING|[get an order](https://docs.pro.coinbase.com/#get-an-order)|
 
 **Others**  
 
@@ -65,45 +66,39 @@ Apart from these two categories, the library also contains a few internal functi
 1. parse_response
 2. auth
 
-## Currently Unsupported Functions
-
-**Orders**  
+## Currently Unsupported Functions - AUTH
 
 |#|function|auth mapping|
 |-|-|-|
-|XX|pending|[get an order](https://docs.pro.coinbase.com/#get-an-order)|
-
-**Deposits**  
-
-|#|function|auth mapping|
-|-|-|-|
-|XX|pending|[payment method](https://docs.pro.coinbase.com/#payment-method)|
-|XX|pending|[coinbase](https://docs.pro.coinbase.com/#coinbase)|
-
-**Withdrawls**  
-
-|#|function|auth mapping|
-|-|-|-|
-|XX|pending|[payment method](https://docs.pro.coinbase.com/#payment-method48)|
-|XX|pending|[coinbase](https://docs.pro.coinbase.com/#coinbase49)|
-|XX|pending|[crypto](https://docs.pro.coinbase.com/#crypto)|
-
-**Reports**  
-
-|#|function|auth mapping|
-|-|-|-|
+|XX|pending|[exchange limits](https://docs.pro.coinbase.com/#get-current-exchange-limits)|
+|XX|pending|[list deposits](https://docs.pro.coinbase.com/#list-deposits)|
+|XX|pending|[single deposit](https://docs.pro.coinbase.com/#single-deposit)|
+|XX|pending|[deposut to payment method](https://docs.pro.coinbase.com/#payment-method)|
+|XX|pending|[deposit from coinbase](https://docs.pro.coinbase.com/#coinbase)|
+|XX|pending|[generate deposit address](https://docs.pro.coinbase.com/#generate-a-crypto-deposit-address)|
+|XX|pending|[list withdrawl](https://docs.pro.coinbase.com/#list-withdrawals)|
+|XX|pending|[single withdrawl](https://docs.pro.coinbase.com/#single-withdrawal)|
+|XX|pending|[cancelled withdrawl](https://docs.pro.coinbase.com/#canceled-withdrawal)|
+|XX|pending|[withdraw to payment method](https://docs.pro.coinbase.com/#payment-method55)|
+|XX|pending|[withdraw to coinbase](https://docs.pro.coinbase.com/#coinbase56)|
+|XX|pending|[withdraw to address](https://docs.pro.coinbase.com/#crypto)|
+|XX|pending|[withdrawal fee](https://docs.pro.coinbase.com/#fee-estimate)|
+|XX|pending|[create conversion](https://docs.pro.coinbase.com/#create-conversion)|
+|XX|pending|[list payment methods](https://docs.pro.coinbase.com/#payment-methods)|
+|XX|pending|[list coinbase accounts](https://docs.pro.coinbase.com/#coinbase-accounts)|
+|XX|pending|[current fee](https://docs.pro.coinbase.com/#fees)|
 |XX|pending|[create a new report](https://docs.pro.coinbase.com/#create-a-new-report)|
 |XX|pending|[report status](https://docs.pro.coinbase.com/#get-report-status)|
+|XX|pending|[list profiles](https://docs.pro.coinbase.com/#profiles26)|
+|XX|pending|[get a profile](https://docs.pro.coinbase.com/#get-a-profile)|
+|XX|pending|[transfer funds across profiles](https://docs.pro.coinbase.com/#create-profile-transfer)|
 
-**Others**
-
-|#|function|auth mapping|
+## Currently Unsupported Functions - PUBLIC
+|#|function|mapping|
 |-|-|-|
-|XX|pending|[create conversion](https://docs.pro.coinbase.com/#create-conversion)|
-|XX|pending|[list coinbase accounts](https://docs.pro.coinbase.com/#list-accounts56)|
-|XX|pending|[trailing volume](https://docs.pro.coinbase.com/#trailing-volume)|
+|XX|pending|[get a single product](https://docs.pro.coinbase.com/#get-single-product)|
 
-Apart from the above listed pending functions, the current version does not support the following key capabilities:
+Apart from the above listed pending functions, the current version does not support the following capabilities:  
 1. Pagination   
 
 ## How to install:
