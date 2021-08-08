@@ -41,7 +41,6 @@ public_candles <- function(product_id = "BTC-USD",
     )
   )
 
-  temp <- response
   #transform----
 
   content <- as.data.frame(fromJSON(rawToChar(response$content)))
@@ -54,6 +53,6 @@ public_candles <- function(product_id = "BTC-USD",
   print(content)
 
   #return----
-  # return(content)
-  return(temp)
+  return(content)
+
 }
