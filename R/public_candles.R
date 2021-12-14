@@ -33,7 +33,7 @@ public_candles <- function(product_id = "BTC-USD",
   #fetch response----
   response <- parse_response(
     path = req.url,
-    query = c(
+    query = list(
       "start" = start,
       "end" = end,
       "granularity" = granularity
