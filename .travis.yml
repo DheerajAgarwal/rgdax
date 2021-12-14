@@ -1,4 +1,6 @@
 language: r
+os:
+  - linux
 r:
   - release
   - devel

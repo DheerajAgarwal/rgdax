@@ -4,7 +4,7 @@
 \alias{parse_response}
 \title{Utility Function To Parse Message From GDAX API For Public Functions}
 \usage{
-parse_response(path, query = NULL)
+parse_response(path, query = NA)
 }
 \arguments{
 \item{path}{Mandatory character parameter. This is an extension of the api end point and passed as an argument from the function calling \code{parse_response}.}

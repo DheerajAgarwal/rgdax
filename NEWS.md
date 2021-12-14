@@ -1,21 +1,35 @@
 # NEWS
 
-## Version?
+## Version Details  
+Only versions that were once on CRAN are tracked here with links. Dev versions may be listed without links.
 
-[1.0.1](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+[1.2.3](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
 
 ## What's New?
+The `auth` function now supports both the sandbox and production environment which can be changed with a parameter. 
 
 #### Bug fixes:
-
-_None_
+None
 
 #### Enhancements:
+_1. `auth` functions now includes support for sandbox._  
 
-_1. Updated documentation to provide clarity on date usage for `public_candles()`_
-_2. Created new function `list_orders()` via pull request contribution from [skivalov](https://github.com/skivalov). Related documentation update_
+[1.2.2] 
 
-[1.0.0](https://github.com/DheerajAgarwal/rgdax/tree/master)  
+## What's New?
+This is a totally new implementation based on `httr`. The older versions (1.0) were built on `RCurl` are now unsupported due to certificate and content structure related issues. Since version 1.1 new implementation was only on dev branch and was not documented. V1.2.1 is now on CRAN and the doc is up to date. The details below are since V1.0. 
+
+`README.md` updated to include the pending section with new functions based on the latest API docs.
+
+#### Bug fixes:
+Issue relating to `public_candles` and `public_orderbook` fixed.
+
+#### Enhancements:
+_1.All `auth` based functions._  
+_2. Updated documentation to provide clarity on date usage for `public_candles()`_  
+_3. Created new function `list_orders()` via pull request contribution from [skivalov](https://github.com/skivalov). Related documentation update_
+
+[1.0.0](https://github.com/DheerajAgarwal/rgdax/tree/V1.0)  
 
 ## What's New?
 
@@ -41,7 +55,7 @@ _None_
 _1. Updated `cancel_order` to take an `order_id` as an optional parameter._  
 _2. Created `open_orders` to list all open orders._
 
-[0.5.0](https://github.com/DheerajAgarwal/rgdax/tree/dev)  
+[0.5.0](https://github.com/DheerajAgarwal/rgdax/tree/rgdax_0.5)  
 
 ## What's New?
 
@@ -51,7 +65,7 @@ _2. Created `open_orders` to list all open orders._
 
 #### Enhancements:
 
-[0.4.0](https://github.com/DheerajAgarwal/rgdax/tree/master)
+[0.4.0](https://github.com/DheerajAgarwal/rgdax/tree/rgdax_0.4)
 
 ## What's New?
 

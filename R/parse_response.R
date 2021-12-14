@@ -17,17 +17,11 @@ parse_response <- function(path, query = NULL) {
   url <- modify_url(api.url, path = path)
 
   #fetch response----
-  response <- httr::GET(url = url, query)
+  response <- httr::GET(url = url, query = query)
 
   #validate success----
   if (response$status_code != 200) {
-    # content <- fromJSON(content(response,
-    #                             as = "text"))
-    # message <- content$message
-    # message <- content(httr::GET(url))
     stop(message)
-  } else {
-    # content(httr::GET(url))
   }
 
   #return----
