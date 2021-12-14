@@ -29,8 +29,10 @@ public_orderbook <- function(product_id = "BTC-USD", level = 1) {
   req.url <- paste0("/products/", product_id, "/book")
 
   #fetch response----
-  response <- parse_response(path = req.url,
+  response <<- parse_response(path = req.url,
                             query = list("level" = level))
+
+  print(response)
 
   #transform----
   content <- as.data.frame(fromJSON(rawToChar(response$content)))
