@@ -50,7 +50,7 @@ public_candles <- function(product_id = "BTC-USD",
     c("time", "low", "high", "open", "close", "volume")
   content$time <-
     as.POSIXct(content$time, origin = "1970-01-01", tz = "GMT")
-  print(content)
+  #print(content)
 
   #return----
   return(content)
