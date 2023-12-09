@@ -30,9 +30,9 @@ auth <- function(method,
                  envir = "prod") {
   #define api base url----
   if (envir == "prod") {
-    api.url <- "https://api.pro.coinbase.com"
+    api.url <- "https://api.exchange.coinbase.com"
   } else {
-    api.url <- "https://api-public.sandbox.pro.coinbase.com"
+    api.url <- "https://api-public.sandbox.exchange.coinbase.com"
   }
 
   #generate nonce and key encodings----
