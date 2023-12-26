@@ -13,7 +13,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 Depends:
-  R(>= 4.0),
+  R(>= 3.6),
   digest,
   jsonlite,
   RCurl,
